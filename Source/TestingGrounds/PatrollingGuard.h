@@ -13,7 +13,7 @@ class TESTINGGROUNDS_API APatrollingGuard : public ATP_ThirdPersonCharacter
 {
 	GENERATED_BODY()
 	
-public:
+public: // TODO remove or create Getters/Setters
 	UPROPERTY(EditInstanceOnly, Category =  "Patrol Route")
 	TArray<AActor*> PatrolPointsCPP;
 
