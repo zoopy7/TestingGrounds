@@ -44,7 +44,10 @@ public:
 	/** Gun muzzle's offset from the characters location */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	FVector GunOffset;
-	
+
+	UPROPERTY(EditDefaultsOnly, Category = "")
+	TSubclassOf<class AGun> GunBlueprint;
+		
 protected:
 	
 	/** Resets HMD orientation and position in VR. */
@@ -100,5 +103,7 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
+private:
+	AGun* Gun;
 };
 
